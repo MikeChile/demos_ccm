@@ -2,36 +2,97 @@
 <html lang="es">
 
 <head>
+    <!-- Etiqueta de carácter de codificación -->
     <meta charset="UTF-8">
+
+    <!-- Etiqueta de viewport para responsividad -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Etiqueta de título de la página -->
+    <title>Colegio CCM</title>
+
+    <!-- Etiqueta de favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo CCM.png">
+
+    <!-- Etiqueta de descripción de la página para motores de búsqueda -->
+    <meta name="description" content="Colegio CCM, educación de calidad para tus hijos.">
+
+    <!-- Etiqueta de palabras clave para motores de búsqueda -->
+    <meta name="keywords" content="Colegio CCM, educación, calidad, hijos">
+
+    <!-- Etiqueta de autor de la página -->
+    <meta name="author" content="Tu nombre">
+
+    <!-- Etiqueta de copyright de la página -->
+    <meta name="copyright" content="&copy; 2023 Colegio CCM. Todos los derechos reservados.">
+
+    <!-- Etiqueta de robots para motores de búsqueda -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Etiqueta de sitemap para motores de búsqueda -->
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
+
+    <!-- Etiqueta de Open Graph para redes sociales -->
+    <meta property="og:title" content="Colegio CCM">
+    <meta property="og:description" content="Colegio CCM, educación de calidad para tus hijos.">
+    <meta property="og:image" content="imagen.jpg">
+    <meta property="og:url" content="https://www.colegioccm.cl">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Demo web ccm 1</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <img src="assets/img/logo CCM.png" alt="Logo Colegio CCM">
-        <h1>Colegio CCM</h1>
-        <div class="header-links">
-            <a href="#">Cuenta</a>
+    <div class="menu">
+        <header>
+            <img src="assets/img/logo CCM.png" alt="Logo Colegio CCM">
+            <h1>Colegio CCM</h1>
+            <div class="header-links">
+                <a href="#">Noticias</a>
+                <a href="#">Biblioteca Digital</a>
+                <a href="#">Correo Institucional</a>
+                <a href="#">Lirmi</a>
+                <a href="#">Portal Docente</a>
+            </div>
+        </header>
+        <nav>
+            <a href="#"><i class='bx bx-home'></i> Inicio</a>
+            <a href="#"><i class='bx bxs-school'></i> Nuestro Colegio</a>
+            <a href="#"><i class='bx bx-group'></i>Organización</a>
+            <a href="#"><i class='bx bx-file'></i> Documentos</a>
+            <a href="#"><i class='bx bx-envelope'></i> Contacto</a>
+            <a href="#"><i class='bx bx-cycling'></i>Talleres</a>
+            <a class="btn-admision" href="#"><i class='bx bx-door-open'></i> Admisión</a>
+        </nav>
+
+        <button id="mobile-link-button"><i class="bx bx-menu"></i> Menú</button>
+        <!-- Caja de enlaces en versión móvil -->
+        <div class="mobile-links" id="mobile-links">
+            <a href="#"><i class='bx bx-home'></i> Inicio</a>
+            <a href="#"><i class='bx bxs-school'></i> Nuestro Colegio</a>
+            <a href="#"><i class='bx bx-group'></i>Organización</a>
+            <a href="#"><i class='bx bx-file'></i> Documentos</a>
+            <a href="#"><i class='bx bx-envelope'></i> Contacto</a>
+            <a href="#"><i class='bx bx-cycling'></i>Talleres</a>
+
+            <a class="btn-admision" href="#"><i class='bx bx-door-open'></i> Admisión</a>
+            <hr>
             <a href="#">Noticias</a>
             <a href="#">Biblioteca Digital</a>
             <a href="#">Correo Institucional</a>
             <a href="#">Lirmi</a>
             <a href="#">Portal Docente</a>
         </div>
-    </header>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Nuestro Colegio</a>
-        <a href="#">Organización</a>
-        <a href="#">Documentos</a>
-        <a href="#">Contacto</a>
-        <a href="#">Talleres</a>
-        <a class="btn-admision" href="#">Admisión</a>
-    </nav>
+    </div>
+
     <div class="video-container">
+        <div class="video-overlay">
+            <h2 class="colegio-nombre">Colegio CCM</h2>
+            <p class="colegio-frase">"Formando líderes del futuro"</p>
+        </div>
         <video autoplay muted loop>
             <source src="assets/video/video.mp4" type="video/mp4">
             Tu navegador no soporta videos en HTML5.
@@ -39,165 +100,175 @@
     </div>
     <div class="main-content">
 
+        <!--DESTACADOS-->
         <div class="featured-section">
-            <h2>Destacados</h2>
+            <h2 class="section-title"><i class='bx bxs-star'></i> Destacados</h2>
             <div class="slider">
-                <div class="slide">
-                    <img src="assets/img/not1.png" alt="Noticia 1">
+                <div class="slide active">
+                    <a href="#">
+                        <div class="image-container">
+                            <img src="assets/img/not1.png" alt="Noticia 1">
+                            <div class="overlay-shapes"></div>
+                        </div>
+                    </a>
                     <div class="slide-content">
-                        <h3>Taller de experiencias Pedagogicas</h3>
-                        <p>Descripción breve de la noticia 1.</p>
-                        <button>Leer más</button>
+                        <h3>Taller de Experiencias Pedagógicas</h3>
+                        <p>El taller de experiencias pedagógicas ofrece un enfoque práctico para el aprendizaje.</p>
+                        <button class="cta-button"><i class='bx bx-book-add'></i> Leer más</button>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="assets/img/not2.png" alt="Noticia 2">
+                    <a href="#">
+                        <div class="image-container">
+                            <img src="assets/img/not2.png" alt="Noticia 2">
+                            <div class="overlay-shapes"></div>
+                        </div>
+                    </a>
                     <div class="slide-content">
-                        <h3>Lista de Utiles</h3>
-                        <p>Descripción breve de la noticia 2.</p>
-                        <button>Leer más</button>
+                        <h3>Lista de Útiles 2024</h3>
+                        <p>Consulta la lista de útiles escolares para el próximo año académico.</p>
+                        <button class="cta-button"><i class='bx bx-book-add'></i> Leer más</button>
                     </div>
                 </div>
+            </div>
+            <div class="slider-controls">
+                <button id="prev-slide">‹</button>
+                <button id="next-slide">›</button>
             </div>
         </div>
 
-        <div class="news">
-            <h2>Noticias</h2>
-            <div class="box-news">
+        <!--SELLOS-->
+        <div class="sellos-section">
+            <div class="sellos-container">
+                <div class="sello">Espíritu deportivo</div>
+                <div class="sello">Trabajo bien hecho</div>
+                <div class="sello">Educación de calidad</div>
+                <div class="sello">Innovación y creatividad</div>
+                <div class="sello">Respeto y tolerancia</div>
+                <div class="sello">Trabajo en equipo</div>
+                <div class="sello">Excelencia académica</div>
+                <div class="sello">Desarrollo integral</div>
+                <div class="sello">Valores y principios</div>
+                <div class="sello">Espíritu deportivo</div>
+                <div class="sello">Trabajo bien hecho</div>
+                <div class="sello">Educación de calidad</div>
+                <div class="sello">Innovación y creatividad</div>
+                <div class="sello">Respeto y tolerancia</div>
+                <div class="sello">Trabajo en equipo</div>
+                <div class="sello">Excelencia académica</div>
+                <div class="sello">Desarrollo integral</div>
+                <div class="sello">Valores y principios</div>
+            </div>
+        </div>
 
-                <div class="news-item card">
-                    <img src="assets/img/noticia1.jpg" alt="Admisión 2026" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Admisión 2026</h3>
-                        <p class="card-text">El proceso de admisión Prekínder 2026 para familias nuevas comenzará el 1
-                            de
-                            marzo.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">Leer más</a>
-                    </div>
-                </div>
-                <div class="news-item card">
-                    <img src="assets/img/noticia2.png" alt="Costumbres Cristianas" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Costumbres Cristianas en el Colegio CCM</h3>
-                        <p class="card-text">En el Colegio CCM vivimos las tradiciones cristianas, especialmente en
-                            estos
-                            tiempos del Mes de María, Adviento y la Misa de Navidad.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">Leer más</a>
+        <!--NOTICIAS-->
+        <div class="news">
+            <h2><i class='bx bx-news'></i> Noticias</h2>
+            <div class="box-news row">
+
+                <div class="news-item col-md-4 col-12">
+                    <div class="card">
+                        <img src="assets/img/noticia1.jpg" alt="Admisión 2026" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Admisión 2026</h3>
+                            <p class="card-text">El proceso de admisión Prekínder 2026 para familias nuevas comenzará el
+                                1
+                                de
+                                marzo.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="card-link"><i class='bx bx-book-add'></i> Leer más</a>
+                        </div>
                     </div>
                 </div>
-                <div class="news-item card">
-                    <img src="assets/img/noticia3.jpg" alt="Nuevo Director" class="card-img-top">
-                    <div class="card-body">
-                        <h3 class="card-title">Nuevo Director del Colegio</h3>
-                        <p class="card-text">El 1 de septiembre, asumió un nuevo director: se trata de Daniel Poblete,
-                            exsubdirector del Segundo Ciclo y con una vasta experiencia docente y directiva.</p>
+                <div class="news-item col-md-4 col-12">
+                    <div class="card">
+                        <img src="assets/img/noticia2.png" alt="Costumbres Cristianas" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Costumbres Cristianas en el Colegio CCM</h3>
+                            <p class="card-text">En el Colegio CCM vivimos las tradiciones cristianas, especialmente en
+                                estos
+                                tiempos del Mes de María, Adviento y la Misa de Navidad.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="card-link"><i class='bx bx-book-add'></i> Leer más</a>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">Leer más</a>
+                </div>
+                <div class="news-item col-md-4 col-12">
+                    <div class="card">
+                        <img src="assets/img/noticia3.jpg" alt="Nuevo Director" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Nuevo Director del Colegio</h3>
+                            <p class="card-text">El 1 de septiembre, asumió un nuevo director: se trata de Daniel
+                                Poblete,
+                                exsubdirector del Segundo Ciclo y con una vasta experiencia docente y directiva.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="card-link"><i class='bx bx-book-add'></i> Leer más</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
-            <a href="#" class="masNoticias"> Ver más noticias</a>
+            <a href="#" class="masNoticias"><i class='bx bxs-news'></i> Ver más noticias</a>
         </div>
 
         <div class="centros">
-            <h2>Centros</h2>
+            <h2><i class='bx bxs-user-account'></i> Centros</h2>
             <div class="centros-container">
                 <div class="centro">
-                    <img src="assets/img/centro_alumnos-1.png" alt="">
+                    <img src="assets/img/centro_alumnos-1.png" alt="" class="imagen">
+                    <div class="nombre">Centro de Alumnos</div>
                 </div>
                 <div class="centro">
-                    <img src="assets/img/CENTROPADRES4.jpg" alt="">
+                    <img src="assets/img/centro_padres.png" alt="" class="imagen">
+                    <div class="nombre">Centro de Padres</div>
                 </div>
                 <div class="centro">
-                    <img src="assets/img/images.jpg" alt="">
+                    <img src="assets/img/centro_ex_alumnos.png" alt="" class="imagen">
+                    <div class="nombre">Centro de Ex Alumnos</div>
                 </div>
             </div>
         </div>
 
 
         <div class="numeros-ccm">
-
-            <div style="height:150px; align-items: center; display: flex; justify-content: center">
-                <center>
-                    <p style="font-family: 'Montserrat', sans-serif; font-size:25px; font-weight:bold; color:#fff;">
-                        Números CCM</p>
-                </center>
-            </div>
-            <section id="counter-stats" class="wow fadeInRight" data-wow-duration="1.4s">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-3 stats">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <div class="counting" data-count="124">0</div>
-                            <h5>PROFESORES</h5>
-                        </div>
-
-                        <div class="col-lg-3 stats">
-                            <i class="fa fa-building" aria-hidden="true"></i>
-                            <div class="counting" data-count="67">0</div>
-                            <h5>TALLERES</h5>
-                        </div>
-
-                        <div class="col-lg-3 stats">
-                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            <div class="counting" data-count="1890">0</div>
-                            <h5>ESTUDIANTES</h5>
-                        </div>
-
-                        <div class="col-lg-3 stats">
-                            <i class="fa fa-users" aria-hidden="true"></i>
-                            <div class="counting" data-count="180">0</div>
-                            <h5>AGRUPACIONES</h5>
-                        </div>
-
+            <h2>Números CCM</h2>
+            <div class="stats-container">
+                <div class="stats-card" style="background-image: url('assets/img/profesores.jpg');">
+                    <div class="stats-overlay"></div>
+                    <div class="stats-content">
+                        <div class="counting" data-count="124">0</div>
+                        <h5><i class='bx bxs-face'></i> PROFESORES</h5>
                     </div>
-                    <!-- end row -->
                 </div>
-                <!-- end container -->
-
-            </section>
-
-            <script>
-                $(document).ready(function () {
-                    // número count para stats, usando jQuery animate
-
-                    $('.counting').each(function () {
-                        var $this = $(this),
-                            countTo = $this.attr('data-count');
-
-                        $({ countNum: $this.text() }).animate({
-                            countNum: countTo
-                        },
-
-                            {
-
-                                duration: 3000,
-                                easing: 'linear',
-                                step: function () {
-                                    $this.text(Math.floor(this.countNum));
-                                },
-                                complete: function () {
-                                    $this.text(this.countNum);
-                                    //alert('finished');
-                                }
-
-                            });
-
-
-                    });
-                });
-            </script>
+                <div class="stats-card" style="background-image: url('assets/img/talleres.jpeg');">
+                    <div class="stats-overlay"></div>
+                    <div class="stats-content">
+                        <div class="counting" data-count="67">0</div>
+                        <h5><i class='bx bx-cycling'></i> TALLERES</h5>
+                    </div>
+                </div>
+                <div class="stats-card" style="background-image: url('assets/img/alumnos.jpeg');">
+                    <div class="stats-overlay"></div>
+                    <div class="stats-content">
+                        <div class="counting" data-count="1890">0</div>
+                        <h5><i class='bx bxs-graduation'></i> ESTUDIANTES</h5>
+                    </div>
+                </div>
+                <div class="stats-card" style="background-image: url('assets/img/padres.jpg');">
+                    <div class="stats-overlay"></div>
+                    <div class="stats-content">
+                        <div class="counting" data-count="180">0</div>
+                        <h5><i class='bx bx-group'></i> AGRUPACIONES</h5>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="frases-educativas">
-            <h2>Frases Educativas</h2>
+            <h2><i class='bx bx-bookmarks'></i> Frases Educativas</h2>
             <div class="frase-actual">
                 <p id="frase">"<span id="frase-texto"></span>"</p>
                 <cite id="autor"></cite>
@@ -207,36 +278,119 @@
     </div>
 
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Información de Contacto</h3>
-                <ul>
-                    <li>Teléfono: 123456789</li>
-                    <li>Correo electrónico: <a href="mailto:info@ccm.cl">info@ccm.cl</a></li>
-                    <li>Dirección: Av. Los Ángeles 1234, Santiago, Chile</li>
-                </ul>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+
+                            <div class="cta-text">
+                                <i class='bx bx-current-location'></i>
+                                <h4> Encuentranos</h4>
+                                <span>San Nicolás #1261, San Miguel, Santiago de Chile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class='bx bx-phone'></i>
+                            <div class="cta-text">
+                                <h4>Llamanos</h4>
+                                <span>(56 2) 2522 3387</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class='bx bx-envelope'></i>
+                            <div class="cta-text">
+                                <h4>Nuestro correo</h4>
+                                <span>ccm.contacto@colegiocorazondemaria.cl</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-column">
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li><a href="#" target="_blank">Facebook</a></li>
-                    <li><a href="#" target="_blank">Instagram</a></li>
-                    <li><a href="#" target="_blank">Twitter</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Mapa del Sitio</h3>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="#">Centros</a></li>
-                    <li><a href="#">Números CCM</a></li>
-                </ul>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="assets/img/logo CCM.png" class="img-fluid"
+                                        alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>Aprende con pasión, crece con perseverancia, y alcanza tus sueños con determinación y
+                                    corazón. La educación es el puente hacia un futuro brillante, y cada paso que das te
+                                    acerca más a tus metas. ¡Sigue adelante y no te rindas!</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span><i class='bx bx-network-chart'></i> Siguenos</span>
+                                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                                <a href="#"><i class='bx bxl-twitter'></i></a>
+                                <a href="#"><i class='bx bxl-youtube'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3> <i class='bx bx-link-alt'></i> Enlaces</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Nuestro Colegio</a></li>
+                                <li><a href="#">Organización</a></li>
+                                <li><a href="#">Documentos</a></li>
+                                <li><a href="#">Contacto</a></li>
+                                <li><a href="#">Talleres</a></li>
+                                <li><a href="#">Admisión</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3> <i class='bx bxs-send'></i> Subscribete</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>No te pierdas nuestras últimas noticias, por favor completa el formulario a
+                                    continuación para suscribirte.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Correo">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            &copy; 2025 Colegio CCM. Todos los derechos reservados.
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2025, Todos los derechosreservados <a href="#">CCM</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Noticias</a></li>
+                                <li><a href="#">Biblioteca Digital</a></li>
+                                <li><a href="#">Lirmi</a></li>
+                                <li><a href="#">Portal docente</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
