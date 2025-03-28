@@ -1,0 +1,596 @@
+@font-face {
+  font-family: "Lofter";
+  src: url("../fonts/lobster/Lobster\ 1.4.otf") format("truetype");
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 20px;
+}
+
+:root {
+  --color-principal: #0c0cb4;
+  --color-secundario: #2aa8f1;
+  --blanco: #f7f7f7;
+  --blanco-dos: #ebebeb;
+}
+*/ * {
+  padding: 0;
+  margin: 0;
+}
+.row {
+  margin: 0;
+  --bs-gutter-x: 0em;
+}
+.navbar-static-top {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px 0;
+  z-index: 1030;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0px 0px 15px 15px;
+  -webkit-border-radius: 0px 0px 15px 15px;
+  -moz-border-radius: 0px 0px 15px 15px;
+  -ms-border-radius: 0px 0px 15px 15px;
+  -o-border-radius: 0px 0px 15px 15px;
+  min-width: 900px;
+}
+
+.navbar-static-top .nav {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-static-top .nav-link {
+  color: var(--color-principal);
+  text-decoration: none;
+  padding: 0 15px;
+}
+.bx {
+  color: var(--color-secundario);
+}
+
+.navbar-principal {
+  background-color: #0c0cb4d4;
+  color: white;
+  transition: top 0.3s;
+  height: 130px;
+  z-index: 2;
+}
+.navbar-principal .nav-link {
+  color: white;
+}
+
+.navbar-principal.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1029;
+}
+
+.logonav {
+  height: 100px;
+  margin-top: -10px;
+}
+
+.navbar-toggler {
+  background: white;
+  color: blue;
+}
+
+/*HEADER*/
+#header {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajusta la altura del header para que ocupe toda la pantalla */
+  background-size: cover;
+  background-position: center;
+  margin-top: -130px;
+}
+
+#header img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ajusta la imagen para que se adapte a la pantalla */
+}
+
+/* Estilos para el banner de admisión */
+.banner-admision {
+  position: absolute;
+  top: 60%; /* Ajustado para mejor visibilidad */
+  right: 10%;
+  transform: translateY(-50%);
+  background-color: #f7f7f7cf;
+  padding: 30px; /* Más espacio interno */
+  width: 400px; /* Más ancho */
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar */
+}
+
+/* Título más grande */
+.banner-admision h2 {
+  font-size: 40px;
+  color: var(--color-principal);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Texto más legible */
+.banner-admision p {
+  font-size: 25px;
+  margin-bottom: 25px;
+  line-height: 1.5; /* Mejor lectura */
+  color: var(--color-secundario);
+}
+
+/* Botón más llamativo */
+.banner-admision button {
+  background-color: var(--color-secundario);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto hover mejorado */
+.banner-admision button:hover {
+  background-color: var(--color-principal);
+  color: white;
+  transform: scale(1.05);
+}
+
+.barra-admision {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff5722; /* Color llamativo pero no molesto */
+  color: white;
+  padding: 10px 5px;
+  font-size: 14px;
+  font-weight: bold;
+  writing-mode: vertical-rl; /* Texto en vertical de abajo hacia arriba */
+  text-align: center;
+  letter-spacing: 2px;
+  border-radius: 10px 0 0 10px; /* Bordes redondeados en el lado izquierdo */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+.barra-admision:hover {
+  background-color: #e64a19; /* Color más oscuro al pasar el cursor */
+  padding: 14px 7px; /* Se agranda ligeramente */
+  font-size: 16px; /* Aumenta el tamaño del texto */
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2); /* Pequeña sombra */
+}
+
+/* Estilos para el banner de admisión en móviles */
+@media (max-width: 991px) {
+  .banner-admision {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+  }
+
+  .banner-admision h2 {
+    font-size: 16px;
+  }
+
+  .banner-admision p {
+    font-size: 14px;
+  }
+
+  .banner-admision button {
+    padding: 10px 15px;
+  }
+}
+/* Estilos para la sección de noticias */
+#noticias {
+  padding: 50px 0;
+}
+
+.card-noticia {
+  border: none;
+  border-radius: 10px;
+  width: 18rem;
+}
+
+.card-noticia img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-noticia h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-noticia p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card-noticia .card-img-top {
+  border-radius: 20px;
+}
+
+.card-noticia .card-body {
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+}
+
+.card-noticia .card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-noticia .card-text {
+  color: var(--color-principal);
+}
+
+.card-noticia button {
+  background-color: var(--color-secundario);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: 22px;
+}
+
+.card-noticia button:hover {
+  background-color: #23527c;
+}
+
+.navbar-principal .container {
+  margin-top: 50px;
+}
+/* Adaptación a móviles */
+@media (max-width: 768px) {
+  .card-noticia {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .navbar-principal {
+    height: 80px;
+  }
+  .navbar-principal .container {
+    margin-top: -18px;
+  }
+  .logonav {
+    height: 70px;
+    margin-top: 10px;
+  }
+
+  .navbar-collapse {
+    background: #0c0cb4d4;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .banner-admision {
+    top: 80%;
+    left: 5%;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+  }
+
+  .barra-admision {
+    font-size: 12px; /* Reducir tamaño de fuente en móvil */
+    padding: 8px 4px; /* Ajuste de padding */
+    transform: translateY(-50%); /* Mantener centrado en la vertical */
+    z-index: 2;
+  }
+}
+
+/* Estilos para la sección de Misión y Visión */
+#mision-vision {
+  background-color: var(--color-secundario); /* Fondo azul claro */
+  padding: 50px 0;
+}
+
+#mision-vision h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#mision-vision img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#mision-vision p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+#mision-vision button {
+  background-color: var(--color-principal);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para la sección del mensaje de la directora */
+#mensaje-directora {
+  padding: 50px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mensaje-directora img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.container-mensaje {
+  max-width: 800px;
+}
+#mensaje-directora h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+#mensaje-directora p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#mensaje-directora h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* Estilos para la sección de calendario de actividades */
+#calendario-actividades {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.slider-calendario {
+  display: inline-flex;
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+.card-calendario {
+  margin-right: 20px;
+  width: 250px;
+  display: none;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.card-calendario.active {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-calendario:not(.active) {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.fecha-destacada {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--color-secundario);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.card-calendario img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-body-calendario {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-title-calendario {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#btn-prev,
+#btn-next {
+  margin: 20px 10px;
+  display: inline-block;
+  background-color: var(--color-principal);
+  color: white;
+}
+
+#calendario-actividades {
+  background-color: var(--color-secundario);
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  /* Ajustar la cantidad de cards visibles en pantallas pequeñas */
+  .slider-calendario {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-calendario {
+    width: 100%; /* Aumenta el tamaño de cada card para que ocupe toda la pantalla */
+    margin-right: 10px; /* Reduce el margen entre las cards */
+    margin-bottom: 20px; /* Agrega espacio entre las cards */
+  }
+
+  .fecha-destacada {
+    font-size: 12px; /* Reduce el tamaño de la fecha destacada */
+    padding: 3px 6px; /* Ajuste del padding */
+  }
+
+  .card-title-calendario {
+    font-size: 16px; /* Ajuste del tamaño de fuente */
+  }
+
+  /* Botones de navegación */
+  #btn-prev,
+  #btn-next {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajuste extra para pantallas muy pequeñas */
+  .slider-calendario {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-calendario {
+    width: 90%; /* Reduce aún más el ancho de las cards */
+    margin-bottom: 15px; /* Ajuste de margen inferior */
+  }
+
+  .fecha-destacada {
+    font-size: 10px; /* Reduce aún más el tamaño de la fecha */
+    padding: 3px 6px;
+  }
+
+  .card-title-calendario {
+    font-size: 14px; /* Ajuste del tamaño de título */
+  }
+}
+
+/* Estilos para la sección del mapa de Google Maps */
+#mapa-colegio {
+  padding: 50px 0;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+/* Estilos para el footer */
+#footer {
+  background-color: var(--color-principal);
+  color: #fff;
+  padding: 50px 0;
+}
+
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer ul li {
+  margin-bottom: 10px;
+}
+
+#footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #ccc;
+}
+
+#footer .social-links {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+#footer .social-links a {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  /* Reestructurar columnas en dispositivos móviles */
+  #footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Cada columna debe ocupar toda la pantalla en móviles */
+  #footer .col-md-4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Ajuste de tamaño de texto para móviles */
+  #footer h5 {
+    font-size: 16px;
+  }
+
+  #footer .social-links {
+    font-size: 20px;
+  }
+
+  #footer .social-links a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajuste para pantallas pequeñas */
+  #footer .social-links {
+    font-size: 18px;
+  }
+
+  #footer .social-links a {
+    font-size: 14px;
+  }
+}
