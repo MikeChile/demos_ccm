@@ -1,21 +1,28 @@
 @font-face {
-  font-family: "Lofter";
-  src: url("../fonts/lobster/Lobster\ 1.4.otf") format("truetype");
-}
-
-body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-size: 20px;
+  font-family: "Foundry";
+  src: url("../fonts/foundry-sterling-1743505899-0/zfoundrysterling-bold.otf")
+    format("truetype");
 }
 
 :root {
-  --color-principal: #0c0cb4;
-  --color-secundario: #2aa8f1;
-  --blanco: #f7f7f7;
-  --blanco-dos: #ebebeb;
+  --color-principal: #000064;
+  --color-secundario: #002c8a;
+  --color-terciario: #1b94da;
+  --color-acento: #ffd700;
+  --color-fondo: #f5f5f5;
+  --color-texto: #1a1a1a;
+
+  --size-titulo: 30px;
+  --size-parrafo: 22px;
 }
+
+body {
+  font-family: "Foundry", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: var(--size-parrafo);
+}
+
 */ * {
   padding: 0;
   margin: 0;
@@ -56,7 +63,7 @@ body {
 }
 
 .navbar-principal {
-  background-color: #0c0cb4d4;
+  background-color: #000064dd;
   color: white;
   transition: top 0.3s;
   height: 130px;
@@ -80,7 +87,10 @@ body {
 
 .navbar-toggler {
   background: white;
-  color: blue;
+  color: var(--color-principal);
+}
+.nav-link {
+  font-size: var(--size-parrafo);
 }
 
 /*HEADER*/
@@ -123,7 +133,7 @@ body {
 
 /* Texto más legible */
 .banner-admision p {
-  font-size: 25px;
+  font-size: var(--size-parrafo);
   margin-bottom: 25px;
   line-height: 1.5; /* Mejor lectura */
   color: var(--color-secundario);
@@ -153,7 +163,7 @@ body {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #ff5722; /* Color llamativo pero no molesto */
+  background-color: #ed3831; /* Color llamativo pero no molesto */
   color: white;
   padding: 10px 5px;
   font-size: 14px;
@@ -186,11 +196,11 @@ body {
   }
 
   .banner-admision h2 {
-    font-size: 16px;
+    font-size: var(--size-titulo);
   }
 
   .banner-admision p {
-    font-size: 14px;
+    font-size: var(--size-parrafo);
   }
 
   .banner-admision button {
@@ -222,7 +232,7 @@ body {
 }
 
 .card-noticia p {
-  font-size: 14px;
+  font-size: var(--size-parrafo);
   color: #666;
   margin-bottom: 20px;
 }
@@ -235,6 +245,11 @@ body {
   background-color: transparent;
   border: none;
   padding: 20px;
+  min-height: 150px;
+}
+.card-noticia .card-footer {
+  background-color: transparent;
+  border: none;
 }
 
 .card-noticia .card-title {
@@ -253,7 +268,6 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: block;
   margin: 0 auto;
   font-size: 22px;
 }
@@ -284,7 +298,7 @@ body {
   }
 
   .navbar-collapse {
-    background: #0c0cb4d4;
+    background: #000064dd;
     padding: 15px;
     margin-top: 10px;
   }
@@ -313,10 +327,11 @@ body {
 }
 
 #mision-vision h2 {
-  font-size: 24px;
+  font-size: var(--size-titulo);
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
+  color: white;
 }
 
 #mision-vision img {
@@ -328,8 +343,9 @@ body {
 }
 
 #mision-vision p {
-  font-size: 22px;
+  font-size: var(--size-parrafo);
   margin-bottom: 30px;
+  color: var(--color-fondo);
 }
 
 #mision-vision button {
@@ -368,26 +384,30 @@ body {
   max-width: 800px;
 }
 #mensaje-directora h2 {
-  font-size: 22px;
+  font-size: var(--size-titulo);
   font-weight: bold;
   margin-bottom: 10px;
   font-style: italic;
-}
-
-#mensaje-directora p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-#mensaje-directora h2 {
-  font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+#mensaje-directora p {
+  font-size: var(--size-parrafo);
+  margin-bottom: 20px;
+}
+
 /* Estilos para la sección de calendario de actividades */
 #calendario-actividades {
   padding: 50px 0;
   text-align: center;
+  min-height: 500px;
+}
+
+#calendario-actividades h2 {
+  font-size: var(--size-titulo);
+  color: white;
+  margin-bottom: 20px;
 }
 
 .slider-calendario {
@@ -438,7 +458,7 @@ body {
 }
 
 .card-title-calendario {
-  font-size: 18px;
+  font-size: var(--size-parrafo);
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -513,6 +533,12 @@ body {
   padding: 50px 0;
 }
 
+#mapa-colegio h2 {
+  font-size: var(--size-titulo);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 #map {
   width: 100%;
   height: 400px;
@@ -553,6 +579,17 @@ body {
 #footer .social-links a {
   margin: 0 10px;
   font-size: 18px;
+}
+
+#footer .row {
+  padding: 10px;
+}
+#footer .col-md-4 {
+  padding: 10px;
+}
+#footer h5 {
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
 }
 
 /* Estilo responsivo */
