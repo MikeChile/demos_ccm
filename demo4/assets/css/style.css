@@ -90,7 +90,7 @@ body {
   color: var(--color-principal);
 }
 .nav-link {
-  font-size: var(--size-parrafo);
+  font-size: 18px;
 }
 
 /*HEADER*/
