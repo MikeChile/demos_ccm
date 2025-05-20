@@ -31,6 +31,60 @@ body {
   margin: 0;
   --bs-gutter-x: 0em;
 }
+
+#fontSwitcher {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+#fontSwitcher:hover {
+  opacity: 1;
+}
+
+#fontToggleBtn {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.font-options {
+  display: none;
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 5px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#fontSwitcher:hover .font-options {
+  display: flex;
+}
+
+.font-options button {
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.font-options button:hover {
+  text-decoration: underline;
+}
+
 .navbar-static-top {
   background-color: #f8f8f8;
   border-bottom: 1px solid #e7e7e7;
@@ -397,6 +451,23 @@ body {
   margin-bottom: 20px;
 }
 
+#mensaje-directora blockquote {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-style: italic;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+#mensaje-directora blockquote::before {
+  content: "“";
+  font-size: 3rem;
+  color: #007bff;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+
 /* Estilos para la sección de calendario de actividades */
 #calendario-actividades {
   padding: 50px 0;
@@ -410,65 +481,41 @@ body {
   margin-bottom: 20px;
 }
 
-.slider-calendario {
-  display: inline-flex;
-  overflow-x: hidden;
+/*fondo de calendario*/
+.fc .fc-view-harness {
+  flex-grow: 1;
+  position: relative;
+  background: white;
+}
+
+/* Centra los números de día y el contenido dentro de las celdas del calendario */
+.fc-daygrid-day-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  height: 100%; /* Asegura que use toda la celda */
+  text-align: center;
 }
 
-.card-calendario {
-  margin-right: 20px;
-  width: 250px;
-  display: none;
-  transition: opacity 0.5s, transform 0.5s;
+/* Quitar línea debajo de los dias (lun, mar, mier, etc.) */
+.fc-scrollgrid-sync-inner a {
+  text-decoration: none !important;
 }
 
-.card-calendario.active {
-  display: block;
-  opacity: 1;
-  transform: scale(1);
+/* Quitar línea debajo de los números del calendario (1, 2, 3, etc.) */
+.fc-daygrid-day a {
+  text-decoration: none !important;
 }
 
-.card-calendario:not(.active) {
-  opacity: 0;
-  transform: scale(0.8);
-}
-
-.fecha-destacada {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: var(--color-secundario);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.card-calendario img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.card-body-calendario {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 0 0 10px 10px;
-}
-
-.card-title-calendario {
-  font-size: var(--size-parrafo);
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-#btn-prev,
-#btn-next {
-  margin: 20px 10px;
-  display: inline-block;
-  background-color: var(--color-principal);
+/*eventos*/
+.fc-event {
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 0.75rem;
 }
 
 #calendario-actividades {
@@ -525,6 +572,10 @@ body {
 
   .card-title-calendario {
     font-size: 14px; /* Ajuste del tamaño de título */
+  }
+
+  #mensaje-directora {
+    height: 1150px;
   }
 }
 
